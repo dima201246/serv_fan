@@ -298,7 +298,7 @@ int TempWatch() {
 		local_time	t_n;
 		add_to_file(LOG_FILE, "[DAEMON] Sorry... I must shut down computer... " + str(t_n.day) + "." + str(t_n.mon) + "." + str(t_n.year) + " " + str(t_n.hours) + ":" + str(t_n.min) + ":" + str(t_n.sec));
 		unlink(PID_FILE);
-		system("shutdown -h now");
+		system("reboot");
 		exit(-1);
 	}
 
